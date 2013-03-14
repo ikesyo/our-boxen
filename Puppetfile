@@ -33,3 +33,15 @@ github "sudo",     "1.0.0"
 
 # Optional/custom modules. There are tons available at
 # https://github.com/boxen.
+
+github "dropbox",           "1.1.0"
+github "chrome",            "1.1.0"
+github "firefox",           "1.0.3"
+github "skype",             "1.0.1"
+github "sublime_text_2",    "1.1.0"
+github "sparrow",           "1.0.0"
+github "appcleaner",        "1.0.0"
+github "mou",               "1.0.0"
+github "zsh",               "1.0.0"
+github "java",              "1.0.6"
+github "osx",               "1.0.0"
