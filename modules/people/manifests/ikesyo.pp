@@ -28,19 +28,19 @@ class people::ikesyo {
       provider => pkgdmg;
     'CleanArchiver':
       source   => "http://www.sopht.jp/pub/Mac/CleanArchiver-3.0a6.dmg",
-      provider => compressed_app;
+      provider => pkgdmg;
     'BetterTouchTool':
       source   => "http://www.boastr.de/BetterTouchTool.zip",
       provider => compressed_app;
     'ClipMenu':
       source   => "https://dl.dropbox.com/u/1140644/clipmenu/ClipMenu_0.4.3.dmg",
-      provider => compressed_app;
+      provider => pkgdmg;
     'CotEditor':
       source   => "http://sourceforge.jp/frs/redir.php?m=osdn&f=%2Fcoteditor%2F54872%2FCotEditor_1.3.1_For10.7.dmg",
-      provider => compressed_app;
+      provider => pkgdmg;
     'SourceTree':
       source   => "http://downloads.atlassian.com/software/sourcetree/SourceTree_1.5.7.1.dmg",
-      provider => compressed_app;
+      provider => pkgdmg;
   }
 
   $home     = "/Users/${::luser}"
