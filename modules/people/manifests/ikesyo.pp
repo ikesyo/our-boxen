@@ -23,6 +23,9 @@ class people::ikesyo {
     'XtraFinder':
       source   => "http://www.trankynam.com/xtrafinder/downloads/XtraFinder.dmg",
       provider => pkgdmg;
+    'Google 日本語入力':
+      source   => "http://dl.google.com/japanese-ime/1.8.1310.1/googlejapaneseinput.dmg",
+      provider => pkgdmg;
   }
 
   $home     = "/Users/${::luser}"
