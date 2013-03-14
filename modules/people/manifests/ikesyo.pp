@@ -2,6 +2,7 @@ class people::ikesyo {
   include dropbox
   include chrome
   include firefox
+  include skype
   include sublime_text_2
   include sparrow
   include appcleaner
