@@ -8,7 +8,6 @@ class people::ikesyo {
   include appcleaner
   include mou
   include zsh
-  include osx
 
   # homebrewでインストール
   package {
