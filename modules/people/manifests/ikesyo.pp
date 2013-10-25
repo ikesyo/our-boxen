@@ -43,7 +43,7 @@ class people::ikesyo {
       provider => appdmg;
   }
 
-  $home     = "/Users/${::luser}"
+  $home     = "/Users/${::boxen_user}"
   $src      = "${home}/src"
   $dotfiles = "${src}/dotfiles"
 }
