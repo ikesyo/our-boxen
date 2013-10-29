@@ -1,4 +1,54 @@
 class people::ikesyo {
+  # boxen/puppet-osx
+  include osx::finder::show_external_hard_drives_on_desktop
+  include osx::finder::show_removable_media_on_desktop
+  include osx::finder::unhide_library
+  include osx::global::enable_keyboard_control_access
+  include osx::global::expand_print_dialog
+  include osx::global::expand_save_dialog
+  include osx::no_network_dsstores
+  include osx::software_update
+  include osx::universal_access::ctrl_mod_zoom
+
+  class { 'osx::global::key_repeat_delay':
+    delay => 25
+  }
+  class { 'osx::global::key_repeat_rate':
+    rate => 2
+  }
+  
+  # Sane Defaults
+  boxen::osx_defaults {
+    user => $::boxen_user
+  }
+
+  # OSX Defaults
+  # https://gist.github.com/jfryman/4963514
+  boxen::osx_defaults { 'Always use current directory in default search':
+    key    => 'FXDefaultSearchScope',
+    domain => 'com.apple.finder',
+    value  => 'SCcf',
+  }
+  boxen::osx_defaults { 'Put my Dock on the right':
+    key    => 'orientation',
+    domain => 'com.apple.dock',
+    value  => 'right',
+  }
+  boxen::osx_defaults { 'Make function keys do real things, and not apple things':
+    key    => 'com.apple.keyboard.fnState',
+    domain => 'NSGlobalDomain',
+    type   => 'boolean'
+    value  => true,
+  }
+  
+  # Key Remap
+  include keyremap4macbook
+  include keyremap4macbook::login_item  
+  keyremap4macbook::remap { 'jis_command2eisuukana_prefer_command': }
+  keyremap4macbook::remap { 'jis_eisuu2commandL_eisuu': }
+  keyremap4macbook::remap { 'jis_kana2commandR_kana': }
+      
+  # applications
   include alfred
   include appcleaner
   include better_touch_tools
@@ -12,9 +62,8 @@ class people::ikesyo {
   include sublime_text_2
   include vagrant
   include virtualbox
-  include zsh
 
-  # homebrewでインストール
+  # homebrew
   package {
     [
       'gibo',
@@ -55,6 +104,9 @@ class people::ikesyo {
       source   => "http://www.trankynam.com/xtrafinder/downloads/XtraFinder.dmg",
       provider => pkgdmg;
   }
+  
+  #shell
+  include zsh
 
   $home     = "/Users/${::boxen_user}"
   $src      = "${home}/src"
