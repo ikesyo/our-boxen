@@ -35,7 +35,7 @@ class people::ikesyo {
     user   => $::boxen_user,
     key    => 'com.apple.keyboard.fnState',
     domain => 'NSGlobalDomain',
-    type   => 'boolean'
+    type   => 'boolean',
     value  => true,
   }
   
