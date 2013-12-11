@@ -16,25 +16,23 @@ class people::ikesyo {
   class { 'osx::global::key_repeat_rate':
     rate => 2
   }
-  
-  # Sane Defaults
-  boxen::osx_defaults {
-    user => $::boxen_user
-  }
 
   # OSX Defaults
   # https://gist.github.com/jfryman/4963514
   boxen::osx_defaults { 'Always use current directory in default search':
+    user   => $::boxen_user,
     key    => 'FXDefaultSearchScope',
     domain => 'com.apple.finder',
     value  => 'SCcf',
   }
   boxen::osx_defaults { 'Put my Dock on the right':
+    user   => $::boxen_user,
     key    => 'orientation',
     domain => 'com.apple.dock',
     value  => 'right',
   }
   boxen::osx_defaults { 'Make function keys do real things, and not apple things':
+    user   => $::boxen_user,
     key    => 'com.apple.keyboard.fnState',
     domain => 'NSGlobalDomain',
     type   => 'boolean'
