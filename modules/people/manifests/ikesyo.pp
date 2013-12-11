@@ -78,7 +78,7 @@ class people::ikesyo {
       source   => "http://www.macbartender.com/Demo/Bartender.zip",
       provider => compressed_app;
     'Bitcasa':
-      source   => "https://www.bitcasa.com/download/mac",
+      source   => "https://d1kbf262vwnlmm.cloudfront.net/Bitcasa_1.4.1287.dmg",
       provider => pkgdmg;
     'CleanArchiver':
       source   => "http://www.sopht.jp/pub/Mac/CleanArchiver-3.0a6.dmg",
@@ -90,7 +90,7 @@ class people::ikesyo {
       source   => "http://sourceforge.jp/frs/redir.php?m=osdn&f=%2Fcoteditor%2F54872%2FCotEditor_1.3.1_For10.7.dmg",
       provider => appdmg;
     'GitHub for Mac':
-      source   => "https://central.github.com/mac/latest",
+      source   => "https://github-central.s3.amazonaws.com/mac/GitHub%20for%20Mac%20164.zip",
       provider => compressed_app;
     'Google Japanese Input':
       source   => "http://dl.google.com/japanese-ime/latest/GoogleJapaneseInput.dmg",
