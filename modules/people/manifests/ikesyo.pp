@@ -45,6 +45,9 @@ class people::ikesyo {
   keyremap4macbook::remap { 'jis_command2eisuukana_prefer_command': }
   keyremap4macbook::remap { 'jis_eisuu2commandL_eisuu': }
   keyremap4macbook::remap { 'jis_kana2commandR_kana': }
+  
+  # android
+  include android::studio
       
   # applications
   include alfred
