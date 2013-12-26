@@ -161,7 +161,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-virtualbox
   specs:
-    virtualbox (1.0.9)
+    virtualbox (1.0.10)
 
 GITHUBTARBALL
   remote: boxen/puppet-xquartz
@@ -218,7 +218,7 @@ DEPENDENCIES
   sublime_text_2 (= 1.1.2)
   sudo (= 1.0.0)
   vagrant (= 3.0.1)
-  virtualbox (= 1.0.9)
+  virtualbox (= 1.0.10)
   xquartz (= 1.1.0)
   zsh (= 1.0.0)
 
